@@ -1,36 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MK LABS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<title>MKRON AI</title>
 
-        body{
-            background:black;
-            color:white;
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-family:Arial, sans-serif;
-        }
-
-        h1{
-            font-size:120px;
-            letter-spacing:10px;
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>MK LABS</h1>
+<!-- LANDING PAGE -->
+
+<div id="landingPage">
+
+    <div class="top-logo">
+        MK ✦ LABS
+    </div>
+
+    <div class="hero-container">
+
+    <img
+        src="assets/hero.png"
+        class="hero-image"
+        alt="MKRON">
+
+    <img
+        src="assets/star.png"
+        class="star-image"
+        alt="Star">
+
+    </div>
+
+    <h1 class="mkron-title">
+        MKRON
+    </h1>
+
+    <button
+        class="start-btn"
+        onclick="openChat()">
+
+        GET STARTED
+
+    </button>
+
+</div>
+
+<!-- CHAT PAGE -->
+
+<div id="chatPage">
+
+    <div class="sidebar">
+
+        <h2>MKRON</h2>
+
+        <button>
+            New Chat
+        </button>
+
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+
+            MKRON AI Assistant
+
+        </div>
+
+        <div id="chatContainer">
+
+            <div class="bot-message">
+
+                Hello, I'm MKRON.
+                How can I help you today?
+
+            </div>
+
+        </div>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Message MKRON">
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
