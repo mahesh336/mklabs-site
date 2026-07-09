@@ -1,102 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MKRON AI</title>
+<title>MK LABS</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<!-- LANDING PAGE -->
+<header>
 
-<div id="landingPage">
+<nav>
 
-    <div class="top-logo">
-        MK ✦ LABS
-    </div>
+<div class="logo">
+MK <span>LABS</span>
+</div>
 
-    <div class="hero-container">
+<ul>
 
-    <img
-        src="assets/hero.png"
-        class="hero-image"
-        alt="MKRON">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#ai">AI</a></li>
+<li><a href="#games">Games</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
 
-    <img
-        src="assets/star.png"
-        class="star-image"
-        alt="Star">
+</ul>
 
-    </div>
+<button class="btn-nav">
+Get Started
+</button>
 
-    <h1 class="mkron-title">
-        MKRON
-    </h1>
+</nav>
 
-    <button
-        class="start-btn"
-        onclick="openChat()">
+</header>
 
-        GET STARTED
+<!-- HERO -->
 
-    </button>
+<section class="hero" id="home">
+
+<img
+class="hero-bg"
+src="assets/images/hero-bg.png"
+alt="">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-left">
+
+<p class="small-title">
+WELCOME TO MK LABS
+</p>
+
+<h1>
+
+Innovate.<br>
+
+Create.<br>
+
+<span>Elevate.</span>
+
+</h1>
+
+<p>
+
+Exploring the future through Artificial Intelligence,
+Software Development,
+Gaming,
+and Digital Innovation.
+
+</p>
+
+<div class="buttons">
+
+<button class="primary">
+
+Get Started →
+
+</button>
+
+<button class="secondary">
+
+Explore
+
+</button>
 
 </div>
 
-<!-- CHAT PAGE -->
+</div>
 
-<div id="chatPage">
+</section>
 
-    <div class="sidebar">
+<!-- STATS -->
 
-        <h2>MKRON</h2>
+<section class="stats">
 
-        <button>
-            New Chat
-        </button>
+<div class="stats-box">
 
-    </div>
+<div class="stat">
 
-    <div class="main">
+<div class="icon">
 
-        <div class="header">
-
-            MKRON AI Assistant
-
-        </div>
-
-        <div id="chatContainer">
-
-            <div class="bot-message">
-
-                Hello, I'm MKRON.
-                How can I help you today?
-
-            </div>
-
-        </div>
-
-        <div class="input-area">
-
-            <input
-                type="text"
-                id="messageInput"
-                placeholder="Message MKRON">
-
-            <button onclick="sendMessage()">
-                Send
-            </button>
-
-        </div>
-
-    </div>
+<div class="icon">📦</div>
 
 </div>
 
-<script src="script.js"></script>
+<div>
+
+<h2>10+</h2>
+
+<p>Projects</p>
+
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="stat">
+
+<div class="icon">
+
+<div class="icon">🎮</div>
+
+</div>
+
+<div>
+
+<h2>5+</h2>
+
+<p>Games</p>
+
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="stat">
+
+<div class="icon">
+
+<div class="icon">👥</div>
+
+</div>
+
+<div>
+
+<h2>1K+</h2>
+
+<p>Users</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<h4>EXPLORE MK LABS</h4>
+
+<h2>What We Create</h2>
+
+<div class="service-grid">
+
+<div class="card">
+
+<div class="card-icon">
+
+🧠
+
+</div>
+
+<h3>AI Assistant</h3>
+
+<p>
+
+Your intelligent assistant powered by AI.
+
+</p>
+
+<a href="#">Explore →</a>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+
+🎮
+
+</div>
+
+<h3>Games</h3>
+
+<p>
+
+Play our Unity powered games.
+
+</p>
+
+<a href="#">Explore →</a>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+
+💻
+
+</div>
+
+<h3>Projects</h3>
+
+<p>
+
+Explore software and web projects.
+
+</p>
+
+<a href="#">Explore →</a>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+
+👤
+
+</div>
+
+<h3>About</h3>
+
+<p>
+
+Know the vision behind MK LABS.
+
+</p>
+
+<a href="#">Explore →</a>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+
+✉
+
+</div>
+
+<h3>Contact</h3>
+
+<p>
+
+Let's build something amazing.
+
+</p>
+
+<a href="#">Explore →</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>MK LABS</h2>
+
+<p>
+
+Designing the Future with AI
+
+</p>
+
+<p>
+
+© 2026 MK LABS
+
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
 
 </body>
+
 </html>
