@@ -1,21 +1,31 @@
 const popup = document.getElementById("devPopup");
 const closePopup = document.getElementById("closePopup");
 
-let popupShown = false;
+let popupOpen = false;
+let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 300 && !popupShown) {
+    const currentScrollY = window.scrollY;
 
-        popup.classList.add("show");
+    // User is scrolling down
+    if (currentScrollY > lastScrollY && currentScrollY > 300) {
 
-        popupShown = true;
+        // Show popup only if it is currently closed
+        if (!popupOpen) {
+            popup.classList.add("show");
+            popupOpen = true;
+        }
+
     }
+
+    lastScrollY = currentScrollY;
 
 });
 
 closePopup.addEventListener("click", () => {
 
     popup.classList.remove("show");
+    popupOpen = false;
 
 });
