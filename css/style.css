@@ -661,3 +661,94 @@ nav ul{
     padding:35px 25px;
 }
 }
+.dev-popup {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+
+    z-index: 9999;
+}
+
+.dev-popup.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.dev-popup-content {
+    position: relative;
+
+    width: min(90%, 430px);
+    padding: 35px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+    color: white;
+
+    transform: translateY(30px) scale(0.95);
+    transition: transform 0.4s ease;
+}
+
+.dev-popup.show .dev-popup-content {
+    transform: translateY(0) scale(1);
+}
+
+.dev-popup-content h2 {
+    margin: 15px 0 10px;
+    font-size: 24px;
+}
+
+.dev-popup-content p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+}
+
+.dev-icon {
+    font-size: 35px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
