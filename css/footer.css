@@ -1,0 +1,16 @@
+.staff-login-link {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+.staff-login-link:hover {
+    color: #8B5CF6;
+}
