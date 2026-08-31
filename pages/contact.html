@@ -493,18 +493,23 @@
 
         .then(function() {
 
-            formStatus.textContent =
-                "Message sent successfully. We'll get back to you soon.";
+    contactForm.reset();
 
-            contactForm.reset();
+    formStatus.textContent = "";
 
-            submitButton.disabled = false;
+    submitButton.disabled = false;
 
-            submitButton.textContent =
-                "Message Sent ✓";
+    submitButton.textContent = "Message Sent ✓";
 
-        })
 
+    // Return button to normal after 3 seconds
+    setTimeout(function() {
+
+        submitButton.textContent = "Send Message →";
+
+    }, 3000);
+
+})
         .catch(function(error) {
 
             console.error("EmailJS Error:", error);
