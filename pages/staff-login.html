@@ -727,13 +727,15 @@ loginForm.addEventListener(
 
             if (profileError) {
 
+                 console.error("PROFILE ERROR:", profileError);
 
-                await supabase.auth.signOut();
+
+                 await supabase.auth.signOut();
 
 
-                throw new Error(
+                 throw new Error(
 
-                    "Your account profile could not be verified."
+                    "Profile error: " + profileError.message
 
                 );
 
