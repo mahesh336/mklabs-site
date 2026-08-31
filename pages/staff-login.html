@@ -4,12 +4,21 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>MK LABS | Developer Access</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
 
 <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -18,19 +27,34 @@
 
 <style>
 
+/* ==========================================
+   RESET
+   ========================================== */
+
 * {
+
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
+
     font-family: 'Space Grotesk', sans-serif;
+
 }
+
+
+/* ==========================================
+   BODY
+   ========================================== */
 
 body {
 
     min-height: 100vh;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background:
@@ -44,9 +68,13 @@ body {
     color: white;
 
     overflow: hidden;
+
 }
 
-/* Background stars */
+
+/* ==========================================
+   BACKGROUND STARS
+   ========================================== */
 
 body::before {
 
@@ -54,10 +82,10 @@ body::before {
 
     position: fixed;
 
+    inset: 0;
+
     width: 100%;
     height: 100%;
-
-    inset: 0;
 
     background-image:
         radial-gradient(
@@ -70,9 +98,13 @@ body::before {
     opacity: .12;
 
     pointer-events: none;
+
 }
 
-/* Login container */
+
+/* ==========================================
+   LOGIN CONTAINER
+   ========================================== */
 
 .login-container {
 
@@ -89,15 +121,20 @@ body::before {
     border-radius: 25px;
 
     backdrop-filter: blur(25px);
+
     -webkit-backdrop-filter: blur(25px);
 
     box-shadow:
         0 25px 80px rgba(0, 0, 0, .45);
 
     z-index: 2;
+
 }
 
-/* Logo */
+
+/* ==========================================
+   LOGO
+   ========================================== */
 
 .logo {
 
@@ -108,12 +145,19 @@ body::before {
     font-weight: 700;
 
     margin-bottom: 10px;
+
 }
 
 .logo span {
 
     color: #8B5CF6;
+
 }
+
+
+/* ==========================================
+   SUBTITLE
+   ========================================== */
 
 .subtitle {
 
@@ -124,9 +168,13 @@ body::before {
     margin-bottom: 35px;
 
     font-size: 15px;
+
 }
 
-/* Heading */
+
+/* ==========================================
+   HEADING
+   ========================================== */
 
 h1 {
 
@@ -135,9 +183,13 @@ h1 {
     font-size: 28px;
 
     margin-bottom: 30px;
+
 }
 
-/* Labels */
+
+/* ==========================================
+   LABELS
+   ========================================== */
 
 label {
 
@@ -148,9 +200,13 @@ label {
     font-size: 14px;
 
     color: rgba(255, 255, 255, .75);
+
 }
 
-/* Inputs */
+
+/* ==========================================
+   INPUTS
+   ========================================== */
 
 input {
 
@@ -173,6 +229,7 @@ input {
     font-size: 15px;
 
     transition: .25s;
+
 }
 
 input:focus {
@@ -181,14 +238,56 @@ input:focus {
 
     box-shadow:
         0 0 20px rgba(139, 92, 246, .2);
+
 }
 
 input::placeholder {
 
     color: rgba(255, 255, 255, .35);
+
 }
 
-/* Login button */
+
+/* ==========================================
+   FORGOT PASSWORD
+   ========================================== */
+
+.forgot-wrapper {
+
+    text-align: right;
+
+    margin-top: -10px;
+
+    margin-bottom: 18px;
+
+}
+
+.forgot-link {
+
+    color: #8B5CF6;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.forgot-link:hover {
+
+    color: #a78bfa;
+
+    text-decoration: underline;
+
+}
+
+
+/* ==========================================
+   LOGIN BUTTON
+   ========================================== */
 
 .login-btn {
 
@@ -213,6 +312,7 @@ input::placeholder {
     cursor: pointer;
 
     transition: .3s;
+
 }
 
 .login-btn:hover {
@@ -221,6 +321,7 @@ input::placeholder {
 
     box-shadow:
         0 0 30px rgba(139, 92, 246, .5);
+
 }
 
 .login-btn:disabled {
@@ -232,9 +333,13 @@ input::placeholder {
     transform: none;
 
     box-shadow: none;
+
 }
 
-/* Status message */
+
+/* ==========================================
+   STATUS MESSAGE
+   ========================================== */
 
 #message {
 
@@ -247,9 +352,13 @@ input::placeholder {
     font-size: 14px;
 
     color: rgba(255, 255, 255, .7);
+
 }
 
-/* Back */
+
+/* ==========================================
+   BACK LINK
+   ========================================== */
 
 .back-link {
 
@@ -266,14 +375,19 @@ input::placeholder {
     font-size: 14px;
 
     transition: .2s;
+
 }
 
 .back-link:hover {
 
     color: #8B5CF6;
+
 }
 
-/* Mobile */
+
+/* ==========================================
+   MOBILE
+   ========================================== */
 
 @media (max-width: 500px) {
 
@@ -301,75 +415,154 @@ input::placeholder {
 
 </head>
 
+
 <body>
+
 
 <div class="login-container">
 
+
+    <!-- =====================================
+         LOGO
+         ===================================== -->
+
     <div class="logo">
+
         MK <span>LABS</span>
+
     </div>
 
+
     <p class="subtitle">
+
         Secure Developer Access
+
     </p>
 
+
     <h1>
+
         Sign in to Console
+
     </h1>
+
+
+    <!-- =====================================
+         LOGIN FORM
+         ===================================== -->
 
     <form id="loginForm">
 
+
+        <!-- EMAIL -->
+
         <label for="email">
+
             Email
+
         </label>
+
 
         <input
             type="email"
             id="email"
             placeholder="Enter your email"
+            autocomplete="email"
             required
         >
 
+
+        <!-- PASSWORD -->
+
         <label for="password">
+
             Password
+
         </label>
+
 
         <input
             type="password"
             id="password"
             placeholder="Enter your password"
+            autocomplete="current-password"
             required
         >
+
+
+        <!-- FORGOT PASSWORD -->
+
+        <div class="forgot-wrapper">
+
+            <a
+                href="#"
+                id="forgotPassword"
+                class="forgot-link"
+            >
+
+                Forgot password?
+
+            </a>
+
+        </div>
+
+
+        <!-- LOGIN BUTTON -->
 
         <button
             type="submit"
             class="login-btn"
             id="loginButton"
         >
+
             Enter Console →
+
         </button>
+
+
+        <!-- MESSAGE -->
 
         <div id="message"></div>
 
+
     </form>
+
+
+    <!-- =====================================
+         BACK TO WEBSITE
+         ===================================== -->
 
     <a
         href="../index.html"
         class="back-link"
     >
+
         ← Back to MK LABS
+
     </a>
+
 
 </div>
 
 
-<!-- Supabase -->
+
+<!-- ==========================================
+     SUPABASE
+     ========================================== -->
 
 <script type="module">
 
+
 import {
+
     createClient
-} from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+}
+
+from
+
+"https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
 
 
 /* ==========================================
@@ -377,162 +570,404 @@ import {
    ========================================== */
 
 const SUPABASE_URL =
+
     "https://ffxubvsodumbicbkjbhu.supabase.co";
 
+
 const SUPABASE_PUBLISHABLE_KEY =
+
     "sb_publishable_Uh2voMc6uTYeCX_k0hD0Sw_AMj-rNSv";
 
 
+
 const supabase =
+
     createClient(
+
         SUPABASE_URL,
+
         SUPABASE_PUBLISHABLE_KEY
+
     );
+
+
+
+/* ==========================================
+   ELEMENTS
+   ========================================== */
+
+const loginForm =
+
+    document.getElementById("loginForm");
+
+
+const loginButton =
+
+    document.getElementById("loginButton");
+
+
+const forgotPassword =
+
+    document.getElementById("forgotPassword");
+
+
+const message =
+
+    document.getElementById("message");
+
 
 
 /* ==========================================
    LOGIN
    ========================================== */
 
-const loginForm =
-    document.getElementById("loginForm");
+loginForm.addEventListener(
 
-const loginButton =
-    document.getElementById("loginButton");
+    "submit",
 
-const message =
-    document.getElementById("message");
+    async (event) => {
 
 
-loginForm.addEventListener("submit", async (event) => {
-
-    event.preventDefault();
-
-    const email =
-        document.getElementById("email").value.trim();
-
-    const password =
-        document.getElementById("password").value;
+        event.preventDefault();
 
 
-    loginButton.disabled = true;
+        const email =
 
-    loginButton.textContent = "Signing in...";
-
-    message.textContent = "";
-
-
-    try {
-
-        const {
-            data,
-            error
-        } = await supabase.auth.signInWithPassword({
-
-            email: email,
-
-            password: password
-
-        });
+            document
+                .getElementById("email")
+                .value
+                .trim();
 
 
-        if (error) {
+        const password =
 
-            throw error;
-
-        }
-
-
-        if (!data.user) {
-
-            throw new Error(
-                "Login failed. Please try again."
-            );
-
-        }
+            document
+                .getElementById("password")
+                .value;
 
 
-        /* ======================================
-           CHECK USER ROLE
-           ====================================== */
 
-        const {
-            data: profile,
-            error: profileError
-        } = await supabase
+        /* Disable button */
 
-            .from("profiles")
-
-            .select("full_name, role")
-
-            .eq("id", data.user.id)
-
-            .single();
-
-
-        if (profileError) {
-
-            await supabase.auth.signOut();
-
-            throw new Error(
-                "Your account profile could not be verified."
-            );
-
-        }
-
-
-        /* ======================================
-           ALLOW ADMIN / DEVELOPER
-           ====================================== */
-
-        if (
-            profile.role !== "admin" &&
-            profile.role !== "developer"
-        ) {
-
-            await supabase.auth.signOut();
-
-            throw new Error(
-                "Your account does not have console access."
-            );
-
-        }
-
-
-        message.textContent =
-            "Login successful. Opening console...";
-
-
-        /*
-         * We will create console.html next.
-         */
-
-        setTimeout(() => {
-
-            window.location.href =
-                "console.html";
-
-        }, 700);
-
-
-    } catch (error) {
-
-        console.error(error);
-
-        message.textContent =
-            error.message ||
-            "Unable to sign in.";
-
-        loginButton.disabled = false;
+        loginButton.disabled = true;
 
         loginButton.textContent =
-            "Enter Console →";
+            "Signing in...";
+
+        message.textContent = "";
+
+
+
+        try {
+
+
+            /* ==================================
+               SIGN IN
+               ================================== */
+
+            const {
+
+                data,
+                error
+
+            } =
+
+                await supabase.auth.signInWithPassword({
+
+                    email: email,
+
+                    password: password
+
+                });
+
+
+
+            if (error) {
+
+                throw error;
+
+            }
+
+
+
+            if (!data.user) {
+
+                throw new Error(
+
+                    "Login failed. Please try again."
+
+                );
+
+            }
+
+
+
+            /* ==================================
+               GET USER PROFILE
+               ================================== */
+
+            const {
+
+                data: profile,
+                error: profileError
+
+            } =
+
+                await supabase
+
+                    .from("profiles")
+
+                    .select("full_name, role")
+
+                    .eq("id", data.user.id)
+
+                    .single();
+
+
+
+            if (profileError) {
+
+
+                await supabase.auth.signOut();
+
+
+                throw new Error(
+
+                    "Your account profile could not be verified."
+
+                );
+
+            }
+
+
+
+            /* ==================================
+               CHECK ROLE
+               ================================== */
+
+            if (
+
+                profile.role !== "admin" &&
+
+                profile.role !== "developer"
+
+            ) {
+
+
+                await supabase.auth.signOut();
+
+
+                throw new Error(
+
+                    "Your account does not have console access."
+
+                );
+
+            }
+
+
+
+            /* ==================================
+               SUCCESS
+               ================================== */
+
+            message.textContent =
+
+                "Login successful. Opening console...";
+
+
+            setTimeout(() => {
+
+
+                window.location.href =
+
+                    "console.html";
+
+
+            }, 700);
+
+
+        }
+
+
+        catch (error) {
+
+
+            console.error(error);
+
+
+            message.textContent =
+
+                error.message ||
+
+                "Unable to sign in.";
+
+
+            loginButton.disabled = false;
+
+
+            loginButton.textContent =
+
+                "Enter Console →";
+
+
+        }
+
 
     }
 
-});
+);
+
+
+
+/* ==========================================
+   FORGOT PASSWORD
+   ========================================== */
+
+forgotPassword.addEventListener(
+
+    "click",
+
+    async (event) => {
+
+
+        event.preventDefault();
+
+
+
+        const email =
+
+            document
+                .getElementById("email")
+                .value
+                .trim();
+
+
+
+        /* ==================================
+           REQUIRE EMAIL
+           ================================== */
+
+        if (!email) {
+
+
+            message.textContent =
+
+                "Enter your email address first.";
+
+
+            return;
+
+        }
+
+
+
+        /* ==================================
+           DISABLE LINK
+           ================================== */
+
+        forgotPassword.style.pointerEvents =
+
+            "none";
+
+
+        message.textContent =
+
+            "Sending password reset email...";
+
+
+
+        try {
+
+
+            /* ==================================
+               DYNAMIC RESET URL
+               ==================================
+
+               LOCAL:
+               http://localhost:3000/pages/reset-password.html
+
+               LIVE:
+               https://mklabs.co.in/pages/reset-password.html
+
+            */
+
+            const resetUrl =
+
+                `${window.location.origin}/pages/reset-password.html`;
+
+
+
+            const {
+
+                error
+
+            } =
+
+                await supabase.auth.resetPasswordForEmail(
+
+                    email,
+
+                    {
+
+                        redirectTo: resetUrl
+
+                    }
+
+                );
+
+
+
+            if (error) {
+
+                throw error;
+
+            }
+
+
+
+            message.textContent =
+
+                "Password reset email sent. Check your inbox.";
+
+
+        }
+
+
+        catch (error) {
+
+
+            console.error(error);
+
+
+            message.textContent =
+
+                error.message ||
+
+                "Unable to send password reset email.";
+
+
+        }
+
+
+        finally {
+
+
+            forgotPassword.style.pointerEvents =
+
+                "auto";
+
+
+        }
+
+
+    }
+
+);
+
 
 </script>
+
 
 </body>
 
