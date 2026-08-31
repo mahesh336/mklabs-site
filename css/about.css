@@ -376,3 +376,37 @@
     }
 
 }
+/* ========================================
+   CREATOR BUTTON
+======================================== */
+
+.creator-button-wrapper {
+    margin-top: 40px;
+}
+
+.creator-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 24px;
+
+    border: 1px solid rgba(155, 108, 255, 0.45);
+    border-radius: 10px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    background: rgba(155, 108, 255, 0.06);
+
+    transition: all 0.3s ease;
+}
+
+.creator-button:hover {
+    background: #8b5cf6;
+    border-color: #8b5cf6;
+    transform: translateY(-3px);
+}
