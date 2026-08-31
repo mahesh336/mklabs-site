@@ -453,20 +453,71 @@
 
 
 
-<script src="../js/navbar.js"></script>
-<script src="../js/script.js"></script>
+<!-- EmailJS -->
+
+<script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 
 <script>
 
+    emailjs.init({
+        publicKey: "ARHbwGL1DeQUzGvPs"
+    });
+
+
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("formStatus");
+    const submitButton = contactForm.querySelector(".contact-submit");
+
 
     contactForm.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-        formStatus.textContent =
-            "The contact form is not connected yet. Please email us directly for now.";
+
+        // Prevent multiple submissions
+        submitButton.disabled = true;
+
+        submitButton.textContent = "Sending...";
+
+        formStatus.textContent = "";
+
+
+        emailjs.sendForm(
+            "service_28f7o92",
+            "template_d9nk37n",
+            contactForm
+        )
+
+        .then(function() {
+
+            formStatus.textContent =
+                "Message sent successfully. We'll get back to you soon.";
+
+            contactForm.reset();
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "Message Sent ✓";
+
+        })
+
+        .catch(function(error) {
+
+            console.error("EmailJS Error:", error);
+
+            formStatus.textContent =
+                "Something went wrong. Please try again or email us directly.";
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "Send Message →";
+
+        });
 
     });
 
