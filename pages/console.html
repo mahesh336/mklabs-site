@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>MK LABS | Developer Console</title>
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #231942 0%,
+            #090b18 45%,
+            #04050c 100%
+        );
+
+    color: white;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==========================================
+   STAR BACKGROUND
+========================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    opacity: .12;
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    padding: 22px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.1);
+
+    background:
+        rgba(10, 11, 24, .65);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+}
+
+
+.logo span {
+
+    color: #8B5CF6;
+
+}
+
+
+.logout-btn {
+
+    padding: 10px 20px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid rgba(139,92,246,.5);
+
+    background:
+        rgba(139,92,246,.12);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.logout-btn:hover {
+
+    background: #8B5CF6;
+
+    box-shadow:
+        0 0 25px rgba(139,92,246,.4);
+
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.main {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 92%);
+
+    margin: 60px auto;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+
+    margin-bottom: 35px;
+
+}
+
+
+.header h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.header p {
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: 16px;
+
+}
+
+
+/* ==========================================
+   USER CARD
+========================================== */
+
+.user-card {
+
+    padding: 28px;
+
+    margin-bottom: 30px;
+
+    border-radius: 20px;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    background:
+        rgba(255,255,255,.06);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+}
+
+
+.user-card h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.user-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.info-box {
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(0,0,0,.2);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.info-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color:
+        rgba(255,255,255,.45);
+
+}
+
+
+.info-value {
+
+    font-size: 16px;
+
+    word-break: break-word;
+
+}
+
+
+.role {
+
+    color: #A78BFA;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================
+   CONSOLE CARDS
+========================================== */
+
+.console-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.console-card {
+
+    padding: 28px;
+
+    min-height: 170px;
+
+    border-radius: 20px;
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    background:
+        rgba(255,255,255,.05);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    transition: .25s;
+
+}
+
+
+.console-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(139,92,246,.45);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+.console-icon {
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.console-card h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.console-card p {
+
+    color:
+        rgba(255,255,255,.5);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+#loading {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #060711;
+
+    z-index: 100;
+
+}
+
+
+.loader-box {
+
+    text-align: center;
+
+}
+
+
+.loader-box h2 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.loader-box p {
+
+    color:
+        rgba(255,255,255,.5);
+
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+#error {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #060711;
+
+    z-index: 99;
+
+}
+
+
+.error-box {
+
+    width: min(90%, 450px);
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    background:
+        rgba(255,255,255,.06);
+
+}
+
+
+.error-box h2 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.error-box p {
+
+    color:
+        rgba(255,255,255,.55);
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+
+}
+
+
+.login-link {
+
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 50px;
+
+    background: #8B5CF6;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .console-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .user-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .header h1 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     LOADING
+========================================== -->
+
+<div id="loading">
+
+    <div class="loader-box">
+
+        <h2>MK LABS</h2>
+
+        <p>Verifying developer access...</p>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     ERROR
+========================================== -->
+
+<div id="error">
+
+    <div class="error-box">
+
+        <h2>Access Denied</h2>
+
+        <p id="errorMessage">
+            You do not have permission to access the developer console.
+        </p>
+
+        <a
+            href="staff-login.html"
+            class="login-link"
+        >
+            Back to Login
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        MK <span>LABS</span>
+    </div>
+
+    <button
+        class="logout-btn"
+        id="logoutButton"
+    >
+        Logout →
+    </button>
+
+</nav>
+
+
+<!-- ==========================================
+     MAIN
+========================================== -->
+
+<main class="main">
+
+
+    <section class="header">
+
+        <h1>
+            Developer Console
+        </h1>
+
+        <p>
+            Secure MK LABS internal developer environment.
+        </p>
+
+    </section>
+
+
+    <!-- ======================================
+         USER INFORMATION
+    ======================================= -->
+
+    <section class="user-card">
+
+        <h2>
+            Account Information
+        </h2>
+
+        <div class="user-info">
+
+
+            <div class="info-box">
+
+                <span class="info-label">
+                    Email
+                </span>
+
+                <span
+                    class="info-value"
+                    id="userEmail"
+                >
+                    Loading...
+                </span>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span class="info-label">
+                    Access Level
+                </span>
+
+                <span
+                    class="info-value role"
+                    id="userRole"
+                >
+                    Loading...
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================
+         CONSOLE
+    ======================================= -->
+
+    <section class="console-grid">
+
+
+        <div class="console-card">
+
+            <div class="console-icon">
+                ⚙️
+            </div>
+
+            <h3>
+                System
+            </h3>
+
+            <p>
+                Manage internal MK LABS system configuration.
+            </p>
+
+        </div>
+
+
+        <div class="console-card">
+
+            <div class="console-icon">
+                🗄️
+            </div>
+
+            <h3>
+                Database
+            </h3>
+
+            <p>
+                Access protected database tools and resources.
+            </p>
+
+        </div>
+
+
+        <div class="console-card">
+
+            <div class="console-icon">
+                🚀
+            </div>
+
+            <h3>
+                Projects
+            </h3>
+
+            <p>
+                Manage internal projects and development resources.
+            </p>
+
+        </div>
+
+
+        <div class="console-card">
+
+            <div class="console-icon">
+                👥
+            </div>
+
+            <h3>
+                Users
+            </h3>
+
+            <p>
+                Manage authorized MK LABS developer accounts.
+            </p>
+
+        </div>
+
+
+        <div class="console-card">
+
+            <div class="console-icon">
+                🔐
+            </div>
+
+            <h3>
+                Security
+            </h3>
+
+            <p>
+                Review authentication and access controls.
+            </p>
+
+        </div>
+
+
+        <div class="console-card">
+
+            <div class="console-icon">
+                📊
+            </div>
+
+            <h3>
+                Analytics
+            </h3>
+
+            <p>
+                View internal system and project analytics.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<!-- ==========================================
+     SUPABASE
+========================================== -->
+
+<script type="module">
+
+import {
+    createClient
+} from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+
+/* ==========================================
+   SUPABASE CONFIGURATION
+========================================== */
+
+const SUPABASE_URL =
+    "https://ffxubvsodumbicbkjbhu.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+    "sb_publishable_Uh2voMc6uTYeCX_k0hD0Sw_AMj-rNSv";
+
+
+const supabase =
+    createClient(
+        SUPABASE_URL,
+        SUPABASE_PUBLISHABLE_KEY
+    );
+
+
+/* ==========================================
+   ELEMENTS
+========================================== */
+
+const loading =
+    document.getElementById("loading");
+
+const errorScreen =
+    document.getElementById("error");
+
+const errorMessage =
+    document.getElementById("errorMessage");
+
+const userEmail =
+    document.getElementById("userEmail");
+
+const userRole =
+    document.getElementById("userRole");
+
+const logoutButton =
+    document.getElementById("logoutButton");
+
+
+/* ==========================================
+   SHOW ACCESS DENIED
+========================================== */
+
+function showError(message) {
+
+    loading.style.display = "none";
+
+    errorMessage.textContent = message;
+
+    errorScreen.style.display = "flex";
+
+}
+
+
+/* ==========================================
+   CHECK AUTHENTICATION
+========================================== */
+
+async function verifyAccess() {
+
+    try {
+
+        /* -------------------------------
+           GET CURRENT SESSION
+        -------------------------------- */
+
+        const {
+            data: {
+                session
+            },
+            error: sessionError
+        } = await supabase.auth.getSession();
+
+
+        if (sessionError) {
+
+            throw sessionError;
+
+        }
+
+
+        /* -------------------------------
+           NO SESSION
+        -------------------------------- */
+
+        if (!session || !session.user) {
+
+            window.location.href =
+                "staff-login.html";
+
+            return;
+
+        }
+
+
+        const user =
+            session.user;
+
+
+        /* -------------------------------
+           GET PROFILE
+        -------------------------------- */
+
+        const {
+            data: profile,
+            error: profileError
+        } = await supabase
+
+            .from("profiles")
+
+            .select("full_name, role")
+
+            .eq("id", user.id)
+
+            .single();
+
+
+        if (profileError) {
+
+            console.error(
+                "Profile error:",
+                profileError
+            );
+
+            showError(
+                "Unable to verify your developer profile."
+            );
+
+            return;
+
+        }
+
+
+        /* -------------------------------
+           CHECK ROLE
+        -------------------------------- */
+
+        if (
+            profile.role !== "admin" &&
+            profile.role !== "developer"
+        ) {
+
+            await supabase.auth.signOut();
+
+            showError(
+                "Your account does not have developer console access."
+            );
+
+            return;
+
+        }
+
+
+        /* -------------------------------
+           DISPLAY USER
+        -------------------------------- */
+
+        userEmail.textContent =
+            user.email || "Unknown";
+
+        userRole.textContent =
+            profile.role;
+
+
+        /* -------------------------------
+           SHOW CONSOLE
+        -------------------------------- */
+
+        loading.style.display =
+            "none";
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        showError(
+            error.message ||
+            "Unable to verify account."
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+logoutButton.addEventListener(
+    "click",
+    async () => {
+
+        logoutButton.disabled = true;
+
+        logoutButton.textContent =
+            "Logging out...";
+
+
+        const {
+            error
+        } = await supabase.auth.signOut();
+
+
+        if (error) {
+
+            console.error(error);
+
+            logoutButton.disabled = false;
+
+            logoutButton.textContent =
+                "Logout →";
+
+            return;
+
+        }
+
+
+        window.location.href =
+            "staff-login.html";
+
+    }
+);
+
+
+/* ==========================================
+   START
+========================================== */
+
+verifyAccess();
+
+</script>
+
+
+</body>
+
+</html>
