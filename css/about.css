@@ -1,0 +1,378 @@
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+.about-hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 8% 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(130, 70, 255, 0.12);
+    filter: blur(140px);
+    border-radius: 50%;
+    top: 10%;
+    right: 5%;
+    pointer-events: none;
+}
+
+.about-hero-content {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.about-label {
+    color: #9b6cff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+}
+
+.about-hero h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 0.95;
+    margin: 0 0 35px;
+    font-weight: 700;
+    letter-spacing: -4px;
+}
+
+.about-hero h1 span,
+.about-section-header span,
+.vision-content span,
+.about-cta span {
+    color: #9b6cff;
+}
+
+.about-intro {
+    max-width: 720px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #aaa9b5;
+}
+
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
+
+.about-section,
+.build-section,
+.principles-section {
+    padding: 120px 8%;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.about-section-header h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.05;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.about-text {
+    padding-top: 20px;
+}
+
+.about-text p {
+    color: #aaa9b5;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+
+/* ========================================
+   WHAT WE BUILD
+======================================== */
+
+.build-section {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.build-section .about-section-header {
+    max-width: 750px;
+    margin-bottom: 70px;
+}
+
+.build-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.build-card {
+    position: relative;
+    padding: 50px;
+    min-height: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+}
+
+.build-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(155, 108, 255, 0.45);
+    background: rgba(155, 108, 255, 0.04);
+}
+
+.build-number {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    color: rgba(255, 255, 255, 0.18);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.build-icon {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.build-card h3 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.build-card p {
+    color: #aaa9b5;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+
+/* ========================================
+   VISION
+======================================== */
+
+.vision-section {
+    padding: 160px 8%;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.vision-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(155, 108, 255, 0.1);
+    filter: blur(160px);
+    border-radius: 50%;
+    left: -250px;
+    top: 20%;
+}
+
+.vision-content {
+    position: relative;
+    z-index: 1;
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+}
+
+.vision-content h2 {
+    font-size: clamp(45px, 6vw, 80px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 40px;
+}
+
+.vision-content p:not(.about-label) {
+    max-width: 750px;
+    margin: 20px auto;
+    color: #aaa9b5;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   PRINCIPLES
+======================================== */
+
+.principles-section {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.principles-section .about-section-header {
+    margin-bottom: 70px;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.principle {
+    padding: 35px 30px;
+    border-left: 1px solid rgba(155, 108, 255, 0.4);
+}
+
+.principle span {
+    color: #9b6cff;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.principle h3 {
+    font-size: 25px;
+    margin: 25px 0 15px;
+}
+
+.principle p {
+    color: #aaa9b5;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.about-cta {
+    text-align: center;
+    padding: 150px 8%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-cta h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 0 0 30px;
+}
+
+.about-cta > p:not(.about-label) {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: #aaa9b5;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cta-primary,
+.cta-secondary {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta-primary {
+    background: #8b5cf6;
+    color: white;
+}
+
+.cta-primary:hover {
+    transform: translateY(-3px);
+}
+
+.cta-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.cta-secondary:hover {
+    border-color: #8b5cf6;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .build-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        min-height: 70vh;
+        padding: 120px 7% 70px;
+    }
+
+    .about-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .about-intro {
+        font-size: 17px;
+    }
+
+    .about-section,
+    .build-section,
+    .principles-section {
+        padding: 80px 7%;
+    }
+
+    .build-card {
+        padding: 35px;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-section {
+        padding: 100px 7%;
+    }
+
+    .about-cta {
+        padding: 100px 7%;
+    }
+
+}
