@@ -1,0 +1,488 @@
+/* ========================================
+   CREATOR PAGE
+======================================== */
+
+.creator-hero {
+    min-height: 65vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 140px 8% 100px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.creator-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -150px;
+    top: 50px;
+
+    background: rgba(139, 92, 246, 0.12);
+
+    filter: blur(150px);
+
+    border-radius: 50%;
+}
+
+.creator-hero-content {
+    max-width: 1100px;
+    width: 100%;
+
+    margin: auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+.creator-label {
+    color: #9b6cff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.creator-hero h1 {
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    margin: 0 0 35px;
+}
+
+.creator-hero h1 span {
+    color: #9b6cff;
+}
+
+.creator-hero p:not(.creator-label) {
+    max-width: 650px;
+
+    color: #aaa9b5;
+
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+
+/* ========================================
+   CREATOR PROFILE
+======================================== */
+
+.creator-profile {
+    padding: 120px 8%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.creator-profile-container {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 400px 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+
+/* PHOTO */
+
+.creator-photo {
+    width: 100%;
+}
+
+.creator-photo-frame {
+    aspect-ratio: 1 / 1;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(155, 108, 255, 0.4);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(155, 108, 255, 0.2),
+            transparent 60%
+        ),
+        rgba(255, 255, 255, 0.025);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 0 80px rgba(155, 108, 255, 0.08);
+}
+
+.creator-initials {
+    font-size: 110px;
+
+    font-weight: 700;
+
+    letter-spacing: -7px;
+
+    color: #9b6cff;
+}
+
+
+
+/* DETAILS */
+
+.creator-details h2 {
+    font-size: clamp(45px, 5vw, 75px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin: 0 0 20px;
+}
+
+.creator-details h2 span {
+    color: #9b6cff;
+}
+
+.creator-title {
+    color: #9b6cff !important;
+
+    font-size: 16px !important;
+
+    font-weight: 600;
+
+    margin-bottom: 35px !important;
+}
+
+.creator-details > p:not(.creator-label):not(.creator-title) {
+    color: #aaa9b5;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 22px;
+}
+
+
+
+/* SOCIALS */
+
+.creator-socials {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+.creator-socials a {
+    padding: 13px 21px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.creator-socials a:hover {
+    transform: translateY(-3px);
+
+    background: rgba(139, 92, 246, 0.12);
+
+    border-color: #9b6cff;
+}
+
+
+
+/* ========================================
+   ROLE SECTION
+======================================== */
+
+.creator-role-section {
+    padding: 130px 8%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.creator-role-container {
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.creator-role-container > h2 {
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin: 0 0 70px;
+}
+
+.creator-role-container > h2 span {
+    color: #9b6cff;
+}
+
+.role-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.role-card {
+    padding: 40px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    transition: 0.3s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(155, 108, 255, 0.45);
+}
+
+.role-card > span {
+    color: #9b6cff;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+.role-card h3 {
+    font-size: 28px;
+
+    margin: 25px 0 15px;
+}
+
+.role-card p {
+    color: #aaa9b5;
+
+    line-height: 1.7;
+}
+
+
+
+/* ========================================
+   CURRENT FOCUS
+======================================== */
+
+.creator-focus {
+    padding: 150px 8%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.creator-focus-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.creator-focus h2 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin: 0 0 35px;
+}
+
+.creator-focus h2 span {
+    color: #9b6cff;
+}
+
+.creator-focus p:not(.creator-label) {
+    max-width: 750px;
+
+    margin: 20px auto;
+
+    color: #aaa9b5;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.creator-cta {
+    text-align: center;
+
+    padding: 140px 8%;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.creator-cta h2 {
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin: 0 0 45px;
+}
+
+.creator-cta h2 span {
+    color: #9b6cff;
+}
+
+.creator-cta-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.creator-primary-button,
+.creator-secondary-button {
+    padding: 15px 26px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.creator-primary-button {
+    background: #8b5cf6;
+
+    color: white;
+}
+
+.creator-primary-button:hover {
+    transform: translateY(-3px);
+}
+
+.creator-secondary-button {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: white;
+}
+
+.creator-secondary-button:hover {
+    border-color: #9b6cff;
+}
+
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .creator-profile-container {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .creator-photo {
+        max-width: 400px;
+
+        margin: auto;
+    }
+
+    .role-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .creator-hero {
+        min-height: 60vh;
+
+        padding: 120px 7% 80px;
+    }
+
+    .creator-hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .creator-profile,
+    .creator-role-section {
+        padding: 90px 7%;
+    }
+
+    .creator-focus {
+        padding: 100px 7%;
+    }
+
+    .creator-cta {
+        padding: 100px 7%;
+    }
+
+    .creator-details h2 {
+        letter-spacing: -2px;
+    }
+
+    .creator-socials {
+        flex-direction: column;
+    }
+
+    .creator-socials a {
+        text-align: center;
+    }
+
+}
