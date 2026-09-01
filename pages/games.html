@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore MK LABS Arcade and upcoming high-end game projects.">
+
+    <title>Games | MK LABS</title>
+
+
+    <!-- ==========================================
+         EXISTING MK LABS STYLES
+         ========================================== -->
+
+    <link rel="stylesheet"
+        href="../css/style.css">
+
+    <link rel="stylesheet"
+        href="../css/navbar.css">
+
+    <link rel="stylesheet"
+        href="../css/gameforge.css">
+
+    <link rel="stylesheet"
+        href="../css/responsive.css">
+
+
+    <!-- ==========================================
+         FONT
+         ========================================== -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ==========================================
+         GAMES PAGE STYLE
+         ========================================== -->
+
+    <style>
+
+        /* ==========================================
+           PAGE
+           ========================================== */
+
+        .games-page {
+
+            min-height: 100vh;
+
+            padding-top: 120px;
+            padding-bottom: 100px;
+
+        }
+
+
+        /* ==========================================
+           HERO
+           ========================================== */
+
+        .games-hero {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 80px 24px 70px;
+
+            text-align: center;
+
+        }
+
+
+        .games-label {
+
+            margin-bottom: 20px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            opacity: 0.5;
+
+        }
+
+
+        .games-hero h1 {
+
+            margin: 0;
+
+            font-size: clamp(50px, 8vw, 90px);
+
+            line-height: 0.95;
+
+            letter-spacing: -4px;
+
+            font-weight: 700;
+
+        }
+
+
+        .games-hero h1 span {
+
+            opacity: 0.35;
+
+        }
+
+
+        .games-hero p {
+
+            max-width: 650px;
+
+            margin: 30px auto 0;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            opacity: 0.6;
+
+        }
+
+
+        /* ==========================================
+           CATEGORY SECTION
+           ========================================== */
+
+        .games-categories {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 0 24px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 24px;
+
+        }
+
+
+        /* ==========================================
+           CATEGORY CARD
+           ========================================== */
+
+        .games-category {
+
+            position: relative;
+
+            min-height: 360px;
+
+            padding: 42px;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.10);
+
+            border-radius: 24px;
+
+            background:
+                rgba(255, 255, 255, 0.025);
+
+            overflow: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+
+        }
+
+
+        .games-category:hover {
+
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(255, 255, 255, 0.25);
+
+            background:
+                rgba(255, 255, 255, 0.05);
+
+        }
+
+
+        /* ==========================================
+           CATEGORY NUMBER
+           ========================================== */
+
+        .category-number {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            opacity: 0.4;
+
+        }
+
+
+        /* ==========================================
+           CATEGORY ICON
+           ========================================== */
+
+        .category-icon {
+
+            margin-top: 35px;
+
+            margin-bottom: 20px;
+
+            font-size: 52px;
+
+        }
+
+
+        /* ==========================================
+           CATEGORY TITLE
+           ========================================== */
+
+        .games-category h2 {
+
+            margin: 0 0 15px;
+
+            font-size: 34px;
+
+            letter-spacing: -1px;
+
+        }
+
+
+        .games-category p {
+
+            max-width: 480px;
+
+            margin: 0;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            opacity: 0.55;
+
+        }
+
+
+        /* ==========================================
+           CATEGORY BUTTON
+           ========================================== */
+
+        .category-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            width: fit-content;
+
+            margin-top: 30px;
+
+            padding: 12px 18px;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.14);
+
+            border-radius: 999px;
+
+            color: inherit;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 0.5px;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+
+        }
+
+
+        .category-button:hover {
+
+            transform: translateX(4px);
+
+            background:
+                rgba(255, 255, 255, 0.08);
+
+        }
+
+
+        /* ==========================================
+           ARCADE SECTION
+           ========================================== */
+
+        .arcade-section {
+
+            max-width: 1200px;
+
+            margin: 120px auto 0;
+
+            padding: 0 24px;
+
+        }
+
+
+        .section-label {
+
+            margin-bottom: 14px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            opacity: 0.4;
+
+        }
+
+
+        .section-title {
+
+            margin: 0;
+
+            font-size: clamp(36px, 5vw, 55px);
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+
+        }
+
+
+        .section-description {
+
+            max-width: 600px;
+
+            margin: 18px 0 40px;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            opacity: 0.55;
+
+        }
+
+
+        /* ==========================================
+           ARCADE GRID
+           ========================================== */
+
+        .arcade-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+
+        }
+
+
+        /* ==========================================
+           GAME CARD
+           ========================================== */
+
+        .arcade-card {
+
+            min-height: 260px;
+
+            padding: 28px;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.08);
+
+            border-radius: 20px;
+
+            background:
+                rgba(255, 255, 255, 0.025);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+
+        }
+
+
+        .arcade-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(255, 255, 255, 0.20);
+
+            background:
+                rgba(255, 255, 255, 0.05);
+
+        }
+
+
+        .game-icon {
+
+            font-size: 40px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .arcade-card h3 {
+
+            margin: 0 0 9px;
+
+            font-size: 21px;
+
+        }
+
+
+        .arcade-card p {
+
+            margin: 0;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            opacity: 0.5;
+
+        }
+
+
+        /* ==========================================
+           PLAY BUTTON
+           ========================================== */
+
+        .play-button {
+
+            display: inline-flex;
+
+            width: fit-content;
+
+            margin-top: 25px;
+
+            padding: 10px 16px;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.12);
+
+            border-radius: 999px;
+
+            color: inherit;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease;
+
+        }
+
+
+        .play-button:hover {
+
+            background:
+                rgba(255, 255, 255, 0.08);
+
+            transform: translateX(3px);
+
+        }
+
+
+        /* ==========================================
+           COMING SOON
+           ========================================== */
+
+        .coming-soon {
+
+            opacity: 0.42;
+
+        }
+
+
+        .coming-soon-text {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            opacity: 0.7;
+
+        }
+
+
+        /* ==========================================
+           STUDIOS SECTION
+           ========================================== */
+
+        .studios-section {
+
+            max-width: 1200px;
+
+            margin: 120px auto 0;
+
+            padding: 0 24px;
+
+        }
+
+
+        .studios-box {
+
+            min-height: 420px;
+
+            padding: 55px;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.10);
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.06),
+                    rgba(255,255,255,0.015)
+                );
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+        }
+
+
+        .studios-label {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            opacity: 0.4;
+
+        }
+
+
+        .studios-box h2 {
+
+            max-width: 750px;
+
+            margin: 25px 0 20px;
+
+            font-size: clamp(42px, 6vw, 70px);
+
+            line-height: 0.95;
+
+            letter-spacing: -3px;
+
+        }
+
+
+        .studios-box h2 span {
+
+            opacity: 0.35;
+
+        }
+
+
+        .studios-box p {
+
+            max-width: 620px;
+
+            margin: 0;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            opacity: 0.55;
+
+        }
+
+
+        .studios-status {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            width: fit-content;
+
+            margin-top: 30px;
+
+            padding: 10px 15px;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.12);
+
+            border-radius: 999px;
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            opacity: 0.7;
+
+        }
+
+
+        .status-dot {
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: currentColor;
+
+        }
+
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+
+        .games-footer {
+
+            max-width: 1200px;
+
+            margin: 120px auto 0;
+
+            padding: 60px 24px 20px;
+
+            text-align: center;
+
+            border-top: 1px solid
+                rgba(255,255,255,0.08);
+
+        }
+
+
+        .games-footer h2 {
+
+            margin: 0;
+
+            font-size: 24px;
+
+        }
+
+
+        .games-footer p {
+
+            margin: 10px 0;
+
+            font-size: 13px;
+
+            opacity: 0.5;
+
+        }
+
+
+        /* ==========================================
+           MOBILE
+           ========================================== */
+
+        @media (max-width: 900px) {
+
+            .games-categories {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .arcade-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .games-page {
+
+                padding-top: 90px;
+
+            }
+
+
+            .games-hero {
+
+                padding-top: 50px;
+
+            }
+
+
+            .games-hero h1 {
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .games-categories {
+
+                gap: 16px;
+
+            }
+
+
+            .games-category {
+
+                min-height: 330px;
+
+                padding: 30px;
+
+                border-radius: 20px;
+
+            }
+
+
+            .games-category h2 {
+
+                font-size: 29px;
+
+            }
+
+
+            .arcade-section,
+            .studios-section {
+
+                margin-top: 85px;
+
+            }
+
+
+            .arcade-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .arcade-card {
+
+                min-height: 230px;
+
+            }
+
+
+            .studios-box {
+
+                min-height: 350px;
+
+                padding: 32px;
+
+                border-radius: 22px;
+
+            }
+
+
+            .studios-box h2 {
+
+                letter-spacing: -2px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+
+                <a href="../index.html">
+
+                    MK <span>LABS</span>
+
+                </a>
+
+            </div>
+
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#services">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ai.html">
+                        AI
+                    </a>
+                </li>
+
+                <li>
+                    <a href="games.html"
+                       class="active">
+                        Games
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a href="contact.html"
+               class="btn-nav">
+
+                Get Started
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN GAMES PAGE
+         ========================================== -->
+
+    <main class="games-page">
+
+
+        <!-- ======================================
+             HERO
+             ====================================== -->
+
+        <section class="games-hero">
+
+            <div class="games-label">
+
+                MK LABS / GAMES
+
+            </div>
+
+
+            <h1>
+
+                PLAY.
+                <span>CREATE.</span>
+
+                <br>
+
+                EXPERIENCE.
+
+            </h1>
+
+
+            <p>
+
+                Explore games built by MK LABS —
+                from quick browser experiences
+                in Arcade to ambitious games
+                being developed for the future.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- ======================================
+             TWO MAIN GAME CATEGORIES
+             ====================================== -->
+
+        <section class="games-categories">
+
+
+            <!-- ==================================
+                 ARCADE CATEGORY
+                 ================================== -->
+
+            <article class="games-category">
+
+                <div>
+
+                    <div class="category-number">
+
+                        01 / ARCADE
+
+                    </div>
+
+
+                    <div class="category-icon">
+
+                        🎮
+
+                    </div>
+
+
+                    <h2>
+
+                        Arcade
+
+                    </h2>
+
+
+                    <p>
+
+                        Small, fast and addictive
+                        browser games that you can
+                        play directly on the MK LABS
+                        website.
+
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#arcade"
+                    class="category-button">
+
+                    Explore Arcade →
+
+                </a>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 STUDIOS CATEGORY
+                 ================================== -->
+
+            <article class="games-category">
+
+                <div>
+
+                    <div class="category-number">
+
+                        02 / STUDIOS
+
+                    </div>
+
+
+                    <div class="category-icon">
+
+                        🚀
+
+                    </div>
+
+
+                    <h2>
+
+                        MK LABS Studios
+
+                    </h2>
+
+
+                    <p>
+
+                        Bigger and more ambitious
+                        game projects built beyond
+                        simple browser games.
+
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#studios"
+                    class="category-button">
+
+                    Explore Studios →
+
+                </a>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- ======================================
+             ARCADE
+             ====================================== -->
+
+        <section
+            class="arcade-section"
+            id="arcade">
+
+
+            <div class="section-label">
+
+                01 / ARCADE
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Small games.
+                <br>
+                Big fun.
+
+            </h2>
+
+
+            <p class="section-description">
+
+                Play instantly in your browser.
+                No downloads. No installations.
+                Pick a game and start playing.
+
+            </p>
+
+
+
+            <!-- ==================================
+                 GAME GRID
+                 ================================== -->
+
+            <div class="arcade-grid">
+
+
+                <!-- ==============================
+                     REACTION TEST
+                     ============================== -->
+
+                <article class="arcade-card">
+
+                    <div>
+
+                        <div class="game-icon">
+
+                            ⚡
+
+                        </div>
+
+
+                        <h3>
+
+                            Reaction Test
+
+                        </h3>
+
+
+                        <p>
+
+                            Test how fast you can
+                            react when the signal
+                            appears.
+
+                        </p>
+
+                    </div>
+
+
+                    <!--
+                        This link will work after
+                        we create the actual game.
+                    -->
+
+                    <a
+                        href="../games/arcade/reaction-test/index.html"
+                        class="play-button">
+
+                        PLAY →
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==============================
+                     ROCK PAPER SCISSORS
+                     ============================== -->
+
+                <article
+                    class="arcade-card coming-soon">
+
+                    <div>
+
+                        <div class="game-icon">
+
+                            ✊
+
+                        </div>
+
+
+                        <h3>
+
+                            Rock Paper Scissors
+
+                        </h3>
+
+
+                        <p>
+
+                            Challenge the computer
+                            in the classic game.
+
+                        </p>
+
+
+                        <span class="coming-soon-text">
+
+                            Coming Soon
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ==============================
+                     TIC TAC TOE
+                     ============================== -->
+
+                <article
+                    class="arcade-card coming-soon">
+
+                    <div>
+
+                        <div class="game-icon">
+
+                            ❌
+
+                        </div>
+
+
+                        <h3>
+
+                            Tic-Tac-Toe
+
+                        </h3>
+
+
+                        <p>
+
+                            Classic strategy game
+                            with an upcoming AI
+                            opponent.
+
+                        </p>
+
+
+                        <span class="coming-soon-text">
+
+                            Coming Soon
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ==============================
+                     NUMBER GUESS
+                     ============================== -->
+
+                <article
+                    class="arcade-card coming-soon">
+
+                    <div>
+
+                        <div class="game-icon">
+
+                            🔢
+
+                        </div>
+
+
+                        <h3>
+
+                            Number Guess
+
+                        </h3>
+
+
+                        <p>
+
+                            Find the hidden number
+                            before you run out of
+                            attempts.
+
+                        </p>
+
+
+                        <span class="coming-soon-text">
+
+                            Coming Soon
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ==============================
+                     COLOR MATCH
+                     ============================== -->
+
+                <article
+                    class="arcade-card coming-soon">
+
+                    <div>
+
+                        <div class="game-icon">
+
+                            🎨
+
+                        </div>
+
+
+                        <h3>
+
+                            Color Match
+
+                        </h3>
+
+
+                        <p>
+
+                            Match the correct color
+                            before time runs out.
+
+                        </p>
+
+
+                        <span class="coming-soon-text">
+
+                            Coming Soon
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ==============================
+                     MATH RUSH
+                     ============================== -->
+
+                <article
+                    class="arcade-card coming-soon">
+
+                    <div>
+
+                        <div class="game-icon">
+
+                            🧮
+
+                        </div>
+
+
+                        <h3>
+
+                            Math Rush
+
+                        </h3>
+
+
+                        <p>
+
+                            Solve as many equations
+                            as possible before the
+                            timer ends.
+
+                        </p>
+
+
+                        <span class="coming-soon-text">
+
+                            Coming Soon
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             MK LABS STUDIOS
+             ====================================== -->
+
+        <section
+            class="studios-section"
+            id="studios">
+
+
+            <div class="studios-box">
+
+
+                <div class="studios-label">
+
+                    02 / MK LABS STUDIOS
+
+                </div>
+
+
+                <h2>
+
+                    Bigger games.
+                    <br>
+
+                    <span>
+                        Bigger worlds.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    MK LABS Studios is where our
+                    larger game projects will live.
+                    High-end games, ambitious ideas,
+                    and experiences that go beyond
+                    simple browser games.
+
+                </p>
+
+
+                <div class="studios-status">
+
+                    <span class="status-dot">
+                    </span>
+
+                    Future Projects
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             FOOTER
+             ====================================== -->
+
+        <footer class="games-footer">
+
+            <h2>
+
+                MK LABS
+
+            </h2>
+
+
+            <p>
+
+                Designing the Future with AI
+
+            </p>
+
+
+            <p>
+
+                © 2026 MK LABS
+
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         EXISTING MK LABS JAVASCRIPT
+         ========================================== -->
+
+    <script src="../js/animations.js"></script>
+
+    <script src="../js/cursor.js"></script>
+
+    <script src="../js/navbar.js"></script>
+
+    <script src="../js/particles.js"></script>
+
+    <script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
