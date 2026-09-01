@@ -1,0 +1,834 @@
+/* =========================================================
+   MK LABS — GAMES PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   GAMES PAGE
+   ========================================================= */
+
+.games-page {
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+
+/* =========================================================
+   GAMES HERO
+   ========================================================= */
+
+.games-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 30px 80px;
+    text-align: center;
+}
+
+.games-label {
+    margin-bottom: 22px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.games-hero h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(52px, 8vw, 100px);
+    font-weight: 700;
+
+    line-height: 0.95;
+    letter-spacing: -5px;
+}
+
+.games-hero h1 span {
+    color: rgba(255, 255, 255, 0.30);
+}
+
+.games-hero p {
+    max-width: 700px;
+
+    margin: 32px auto 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAIN GAME CATEGORIES
+   ========================================================= */
+
+.games-categories {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+   ========================================================= */
+
+.games-category {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 42px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.games-category::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    top: -120px;
+    right: -100px;
+
+    background: rgba(139, 92, 246, 0.10);
+
+    filter: blur(70px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.games-category:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(139, 92, 246, 0.40);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(139, 92, 246, 0.07),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+
+/* =========================================================
+   CATEGORY NUMBER
+   ========================================================= */
+
+.category-number {
+    position: relative;
+    z-index: 1;
+
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   CATEGORY ICON
+   ========================================================= */
+
+.category-icon {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 45px;
+    margin-bottom: 25px;
+
+    font-size: 55px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CATEGORY TITLE
+   ========================================================= */
+
+.games-category h2 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 36px;
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+}
+
+.games-category p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 500px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.52);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CATEGORY BUTTON
+   ========================================================= */
+
+.category-button {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+
+    width: fit-content;
+
+    margin-top: 30px;
+
+    padding: 12px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 999px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.category-button:hover {
+    transform: translateX(5px);
+
+    background: #8b5cf6;
+
+    border-color: #8b5cf6;
+}
+
+
+/* =========================================================
+   ARCADE SECTION
+   ========================================================= */
+
+.arcade-section {
+    max-width: 1200px;
+
+    margin: 130px auto 0;
+
+    padding: 0 30px;
+}
+
+.section-label {
+    margin-bottom: 15px;
+
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.section-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(40px, 5vw, 62px);
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.section-description {
+    max-width: 620px;
+
+    margin: 20px 0 45px;
+
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ARCADE GRID
+   ========================================================= */
+
+.arcade-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ARCADE GAME CARD
+   ========================================================= */
+
+.arcade-card {
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.arcade-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -90px;
+    bottom: -100px;
+
+    background: rgba(139, 92, 246, 0.08);
+
+    filter: blur(50px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.arcade-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(139, 92, 246, 0.35);
+
+    background:
+        rgba(139, 92, 246, 0.045);
+}
+
+
+/* =========================================================
+   GAME ICON
+   ========================================================= */
+
+.game-icon {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 22px;
+
+    font-size: 42px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   GAME TITLE
+   ========================================================= */
+
+.arcade-card h3 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+}
+
+.arcade-card p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   PLAY BUTTON
+   ========================================================= */
+
+.play-button {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+
+    width: fit-content;
+
+    margin-top: 25px;
+
+    padding: 10px 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    border-radius: 999px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.play-button:hover {
+    transform: translateX(4px);
+
+    background: #8b5cf6;
+
+    border-color: #8b5cf6;
+}
+
+
+/* =========================================================
+   COMING SOON
+   ========================================================= */
+
+.coming-soon {
+    opacity: 0.55;
+}
+
+.coming-soon:hover {
+    opacity: 0.8;
+}
+
+.coming-soon-text {
+    position: relative;
+    z-index: 1;
+
+    display: inline-block;
+
+    margin-top: 22px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MK LABS STUDIOS
+   ========================================================= */
+
+.studios-section {
+    max-width: 1200px;
+
+    margin: 130px auto 0;
+
+    padding: 0 30px;
+}
+
+.studios-box {
+    position: relative;
+
+    min-height: 420px;
+
+    padding: 60px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.studios-box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -160px;
+    top: -180px;
+
+    background: rgba(139, 92, 246, 0.12);
+
+    filter: blur(90px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.studios-label {
+    position: relative;
+    z-index: 1;
+
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.studios-box h2 {
+    position: relative;
+    z-index: 1;
+
+    max-width: 800px;
+
+    margin: 25px 0 20px;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 6vw, 75px);
+
+    font-weight: 600;
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+.studios-box h2 span {
+    color: rgba(255, 255, 255, 0.30);
+}
+
+.studios-box p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.52);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STUDIOS STATUS
+   ========================================================= */
+
+.studios-status {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    width: fit-content;
+
+    margin-top: 30px;
+
+    padding: 10px 16px;
+
+    border: 1px solid rgba(139, 92, 246, 0.30);
+
+    border-radius: 999px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    background: rgba(139, 92, 246, 0.06);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #8b5cf6;
+
+    box-shadow:
+        0 0 10px rgba(139, 92, 246, 0.8);
+}
+
+
+/* =========================================================
+   GAMES FOOTER
+   ========================================================= */
+
+.games-footer {
+    max-width: 1200px;
+
+    margin: 120px auto 0;
+
+    padding: 60px 30px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.games-footer h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+.games-footer p {
+    margin: 10px 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .games-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .arcade-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .games-page {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+
+    .games-hero {
+        padding: 80px 20px 60px;
+    }
+
+
+    .games-hero h1 {
+        font-size: clamp(44px, 14vw, 65px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .games-hero p {
+        font-size: 14px;
+    }
+
+
+    .games-categories {
+        padding: 0 20px;
+
+        gap: 16px;
+    }
+
+
+    .games-category {
+        min-height: 340px;
+
+        padding: 30px;
+
+        border-radius: 20px;
+    }
+
+
+    .games-category h2 {
+        font-size: 30px;
+    }
+
+
+    .arcade-section {
+        margin-top: 90px;
+
+        padding: 0 20px;
+    }
+
+
+    .section-title {
+        font-size: 42px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .arcade-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .arcade-card {
+        min-height: 240px;
+
+        padding: 26px;
+    }
+
+
+    .studios-section {
+        margin-top: 90px;
+
+        padding: 0 20px;
+    }
+
+
+    .studios-box {
+        min-height: 360px;
+
+        padding: 32px;
+
+        border-radius: 22px;
+    }
+
+
+    .studios-box h2 {
+        font-size: 45px;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .games-footer {
+        margin-top: 90px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
