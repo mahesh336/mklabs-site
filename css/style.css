@@ -752,3 +752,184 @@ nav ul{
 .close-btn:hover {
     background: rgba(255, 255, 255, 0.25);
 }
+
+
+/* ============================= */
+/* VISITOR WELCOME POPUP */
+/* ============================= */
+
+.welcome-popup {
+    position: fixed;
+
+    top: 90px;
+    right: 30px;
+
+    width: 360px;
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-20px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        visibility 0.4s ease;
+}
+
+
+/* POPUP VISIBLE */
+
+.welcome-popup.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* POPUP CONTENT */
+
+.welcome-popup-content {
+
+    position: relative;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 25, 40, 0.97),
+            rgba(10, 10, 20, 0.97)
+        );
+
+    border: 1px solid rgba(145, 85, 255, 0.35);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55),
+        0 0 40px rgba(125, 70, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* ICON */
+
+.welcome-icon {
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6d3de8
+    );
+
+    color: white;
+
+    font-size: 22px;
+}
+
+
+/* TITLE */
+
+.welcome-popup-content h2 {
+
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+
+/* TEXT */
+
+.welcome-popup-content p {
+
+    margin: 0;
+
+    color: #b7b7c2;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+
+/* CLOSE BUTTON */
+
+.welcome-close {
+
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #aaa;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.welcome-close:hover {
+
+    color: #ffffff;
+
+    transform: rotate(90deg);
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .welcome-popup {
+
+        top: 80px;
+
+        left: 15px;
+        right: 15px;
+
+        width: auto;
+
+    }
+
+    .welcome-popup-content {
+
+        padding: 24px;
+
+    }
+
+    .welcome-popup-content h2 {
+
+        font-size: 21px;
+
+    }
+
+}
