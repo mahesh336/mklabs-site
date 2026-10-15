@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MKRON AI | MK LABS</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mkron.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body class="mkron-page">
+
+    <header class="mkron-header">
+        <a href="../index.html" class="mkron-logo">
+            MK <span>LABS</span>
+        </a>
+
+        <div class="mkron-header-right">
+            <span class="status-dot"></span>
+            <span>AI ASSISTANT</span>
+            <a href="ai.html" class="back-link">Back to AI</a>
+        </div>
+    </header>
+
+    <main class="mkron-layout">
+
+        <aside class="mkron-sidebar">
+            <div class="sidebar-brand">
+                <div class="mkron-symbol">M</div>
+                <h2>MKRON <span>AI</span></h2>
+                <p>Your intelligent assistant</p>
+            </div>
+
+            <button id="new-chat" class="new-chat-btn">
+                <span>＋</span> New Chat
+            </button>
+
+            <div class="sidebar-note">
+                <span>✦</span>
+                <p>Ask questions, explore ideas, write code, and solve problems.</p>
+            </div>
+
+            <div class="sidebar-footer">
+                <span>POWERED BY GEMINI</span>
+                <span>MK LABS © 2026</span>
+            </div>
+        </aside>
+
+        <section class="mkron-chat">
+
+            <div class="chat-topbar">
+                <div>
+                    <span class="topbar-label">MK LABS INTELLIGENCE</span>
+                    <h1>MKRON AI</h1>
+                </div>
+
+                <span class="model-badge">AI CHAT</span>
+            </div>
+
+            <div id="chat-messages" class="chat-messages" aria-live="polite">
+
+                <div class="welcome-screen" id="welcome-screen">
+                    <div class="welcome-orb">✦</div>
+
+                    <p class="welcome-label">WELCOME TO MKRON</p>
+
+                    <h2>What can I help<br>you <span>discover?</span></h2>
+
+                    <p class="welcome-description">
+                        Ask me anything. Let's turn your ideas into something real.
+                    </p>
+
+                    <div class="suggestion-grid">
+                        <button class="suggestion"
+                                data-prompt="Teach me Python from the beginning.">
+                            <span>⌘</span>
+                            <strong>Learn to code</strong>
+                            <small>Start learning Python</small>
+                        </button>
+
+                        <button class="suggestion"
+                                data-prompt="Give me an innovative AI project idea for MK LABS.">
+                            <span>✧</span>
+                            <strong>Explore ideas</strong>
+                            <small>Discover new possibilities</small>
+                        </button>
+
+                        <button class="suggestion"
+                                data-prompt="Explain how artificial intelligence works in simple terms.">
+                            <span>◈</span>
+                            <strong>Understand AI</strong>
+                            <small>Explore how AI works</small>
+                        </button>
+
+                        <button class="suggestion"
+                                data-prompt="Help me debug a JavaScript error.">
+                            <span>⌘</span>
+                            <strong>Fix some code</strong>
+                            <small>Solve a coding problem</small>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="chat-error" class="chat-error" role="alert" hidden></div>
+
+            <div class="composer-area">
+                <form id="chat-form" class="chat-composer">
+                    <textarea
+                        id="message-input"
+                        placeholder="Message MKRON AI..."
+                        aria-label="Message MKRON AI"
+                        rows="1"
+                        maxlength="10000"
+                        required></textarea>
+
+                    <button type="submit" id="send-button" aria-label="Send message">
+                        <span>➤</span>
+                    </button>
+                </form>
+
+                <p class="composer-disclaimer">
+                    MKRON AI can make mistakes. Verify important information.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/mkron.js"></script>
+</body>
+</html>
