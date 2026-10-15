@@ -100,12 +100,17 @@ module.exports = async function handler(req, res) {
         const data = await response.json();
 
         if (!response.ok) {
-            console.error("Gemini API error:", data.error?.code || response.status);
+    console.error(
+        "Gemini API error:",
+        "HTTP", response.status,
+        data.error?.status || "UNKNOWN",
+        data.error?.message || "No error message returned"
+    );
 
-            return res.status(502).json({
-                error: "MKRON AI could not generate a response. Please try again."
-            });
-        }
+    return res.status(502).json({
+        error: "MKRON AI could not generate a response. Please try again."
+    });
+}
 
         const answer = data.candidates?.[0]?.content?.parts
             ?.map(part => part.text || "")
