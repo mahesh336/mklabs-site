@@ -1,0 +1,530 @@
+/* ======================================
+   MKRON AI — MAIN THEME
+====================================== */
+
+.mkron-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #08090b;
+    color: #f4f4f5;
+    font-family: "Space Grotesk", sans-serif;
+    overflow: hidden;
+}
+
+.mkron-page *,
+.mkron-page *::before,
+.mkron-page *::after {
+    box-sizing: border-box;
+}
+
+.mkron-page button,
+.mkron-page textarea {
+    font: inherit;
+}
+
+.mkron-page button {
+    cursor: pointer;
+}
+
+.mkron-header {
+    height: 70px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #202126;
+    background: #0b0c0f;
+}
+
+.mkron-logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.mkron-logo span {
+    color: #9295a0;
+}
+
+.mkron-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #a1a1aa;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #6ee7a0;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #6ee7a077;
+}
+
+.back-link {
+    margin-left: 18px;
+    color: #d4d4d8;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+.mkron-layout {
+    height: calc(100dvh - 70px);
+    min-height: 420px;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.mkron-sidebar {
+    padding: 28px 20px 18px;
+    background: #0b0c0f;
+    border-right: 1px solid #202126;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    text-align: center;
+    padding: 10px 0 28px;
+}
+
+.mkron-symbol {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #454752;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #252631, #101116);
+    box-shadow: 0 0 35px #7777ff12;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.sidebar-brand h2 {
+    margin: 0;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.sidebar-brand h2 span {
+    color: #999baa;
+}
+
+.sidebar-brand p {
+    margin-top: 7px;
+    color: #81838f;
+    font-size: 12px;
+}
+
+.new-chat-btn {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background: #17181e;
+    border: 1px solid #30313a;
+    border-radius: 10px;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.new-chat-btn:hover {
+    background: #252631;
+}
+
+.new-chat-btn span {
+    margin-right: 8px;
+    font-size: 19px;
+}
+
+.sidebar-note {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 14px;
+    border: 1px solid #22232a;
+    border-radius: 10px;
+    background: #101115;
+}
+
+.sidebar-note span {
+    color: #b8a8ff;
+}
+
+.sidebar-note p {
+    margin: 0;
+    color: #999ba7;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #656773;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.mkron-chat {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(ellipse at 50% 0%, #24203922, transparent 55%),
+        #08090b;
+}
+
+.chat-topbar {
+    min-height: 83px;
+    padding: 18px 5%;
+    border-bottom: 1px solid #1d1e24;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar-label {
+    color: #858694;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.chat-topbar h1 {
+    margin: 5px 0 0;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+
+.model-badge {
+    padding: 7px 11px;
+    border: 1px solid #30313b;
+    border-radius: 20px;
+    color: #b9bac5;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.chat-messages {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 30px 5%;
+    scrollbar-width: thin;
+    scrollbar-color: #353640 transparent;
+}
+
+.welcome-screen {
+    width: 100%;
+    max-width: 620px;
+    margin: 25px auto 35px;
+    text-align: center;
+}
+
+.welcome-orb {
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 20px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #49445e;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #29233e, #111116);
+    box-shadow: 0 0 50px #927aff12;
+    font-size: 29px;
+    color: #d0c4ff;
+}
+
+.welcome-label {
+    color: #a6a1c3;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.welcome-screen h2 {
+    margin: 16px 0;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    letter-spacing: -1.8px;
+}
+
+.welcome-screen h2 span {
+    color: #b8a8ff;
+}
+
+.welcome-description {
+    color: #999ba7;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.suggestion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.suggestion {
+    min-width: 0;
+    padding: 16px;
+    background: #101115;
+    border: 1px solid #272831;
+    border-radius: 12px;
+    color: #eeeef2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    transition: 0.2s;
+}
+
+.suggestion:hover {
+    background: #171720;
+    border-color: #666080;
+    transform: translateY(-2px);
+}
+
+.suggestion > span {
+    color: #c1b4ff;
+    font-size: 18px;
+}
+
+.suggestion strong {
+    font-size: 12px;
+}
+
+.suggestion small {
+    color: #858794;
+    font-size: 11px;
+}
+
+.chat-message {
+    display: flex;
+    gap: 12px;
+    max-width: 850px;
+    margin: 0 auto 26px;
+    align-items: flex-start;
+}
+
+.message-avatar {
+    flex: 0 0 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #343541;
+    border-radius: 10px;
+    background: #17181e;
+    font-size: 13px;
+}
+
+.chat-message.user .message-avatar {
+    background: #282438;
+    border-color: #4a435f;
+}
+
+.message-body {
+    min-width: 0;
+    flex: 1;
+    padding-top: 3px;
+}
+
+.message-role {
+    margin-bottom: 8px;
+    color: #a5a6b2;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.message-text {
+    color: #e3e3e8;
+    font-size: 14px;
+    line-height: 1.85;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.chat-error {
+    margin: 0 5% 10px;
+    padding: 12px 15px;
+    border: 1px solid #743d47;
+    border-radius: 9px;
+    background: #28151a;
+    color: #ffb9c3;
+    font-size: 12px;
+}
+
+.composer-area {
+    padding: 15px 5% 12px;
+    border-top: 1px solid #1d1e24;
+    background: #0b0c0f;
+}
+
+.chat-composer {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 10px 12px 10px 17px;
+    border: 1px solid #353640;
+    border-radius: 15px;
+    background: #141519;
+    transition: border-color 0.2s;
+}
+
+.chat-composer:focus-within {
+    border-color: #70648f;
+}
+
+.chat-composer textarea {
+    flex: 1;
+    min-width: 0;
+    max-height: 150px;
+    resize: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #f4f4f5;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 7px 0;
+}
+
+.chat-composer textarea::placeholder {
+    color: #777985;
+}
+
+.chat-composer button {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 11px;
+    background: #c5b7ff;
+    color: #17131f;
+    font-size: 19px;
+    transition: 0.2s;
+}
+
+.chat-composer button:hover {
+    background: #ded5ff;
+}
+
+.chat-composer button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.composer-disclaimer {
+    margin: 10px auto 0;
+    max-width: 850px;
+    color: #656773;
+    text-align: center;
+    font-size: 10px;
+}
+
+@media (max-width: 700px) {
+    .mkron-header {
+        height: 60px;
+        padding: 0 18px;
+    }
+
+    .mkron-logo {
+        font-size: 18px;
+    }
+
+    .mkron-header-right {
+        gap: 6px;
+        font-size: 9px;
+    }
+
+    .back-link {
+        margin-left: 8px;
+    }
+
+    .mkron-layout {
+        height: calc(100dvh - 60px);
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mkron-sidebar {
+        display: none;
+    }
+
+    .chat-topbar {
+        min-height: 65px;
+        padding: 12px 18px;
+    }
+
+    .chat-topbar h1 {
+        font-size: 17px;
+    }
+
+    .chat-messages {
+        padding: 20px 16px;
+    }
+
+    .welcome-screen {
+        margin: 15px auto 25px;
+    }
+
+    .welcome-screen h2 {
+        font-size: 31px;
+    }
+
+    .suggestion-grid {
+        gap: 9px;
+        margin-top: 22px;
+    }
+
+    .suggestion {
+        padding: 12px;
+    }
+
+    .suggestion strong {
+        font-size: 11px;
+    }
+
+    .suggestion small {
+        font-size: 10px;
+    }
+
+    .chat-message {
+        gap: 9px;
+    }
+
+    .message-text {
+        font-size: 13px;
+    }
+
+    .composer-area {
+        padding: 12px 12px 9px;
+    }
+
+    .chat-composer {
+        padding: 8px 9px 8px 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .suggestion-grid {
+        grid-template-columns: 1fr;
+    }
+}
